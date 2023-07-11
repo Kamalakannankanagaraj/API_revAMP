@@ -97837,17 +97837,17 @@
 									"script": {
 										"exec": [
 											"const jsonData= pm.response.json();\r",
-											"pm.test(\"success should be TRUE\", function() {\r",
+											"pm.test(\"GetCMSFilterData - PA - success should be TRUE\", function() {\r",
 											" console.log(jsonData.success)\r",
 											" pm.expect(jsonData.success).to.eql(true)\r",
 											"});\r",
 											"\r",
-											"pm.test(\"errors should be null\", function() {\r",
+											"pm.test(\"GetCMSFilterData - PA -errors should be null\", function() {\r",
 											" console.log(jsonData.errors)\r",
 											" pm.expect(jsonData.errors).to.eql(null)\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Verify Json Count should be 3\", function () {\r",
+											"pm.test(\"GetCMSFilterData - PA - Verify Json Count should be 3\", function () {\r",
 											" console.log(jsonData)\r",
 											"var JsonCount  = Object.keys(jsonData).length;\r",
 											"console.log(JsonCount)\r",
@@ -99508,6 +99508,3646 @@
 											"key": "roleId",
 											"value": "09090"
 										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "revAMP- EMAIL REGULATION",
+			"item": [
+				{
+					"name": "Business scenarios",
+					"item": [
+						{
+							"name": "EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope.",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope. - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"programName\": \"Hospital\",\r\n  \"fromName\": \"Sruthi\",\r\n  \"toName\": \"Kamal K\",\r\n  \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n  \"message\": \"Test\",\r\n  \"coPId\": 1197,\r\n  \"elementId\": 31004,\r\n  \"programId\": 2,\r\n  \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - Hospital and Regulation : §482.1(a) - Statutory basis.",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1(a) - Statutory basis. - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"programName\": \"Hospital\",\r\n  \"fromName\": \"Sruthi\",\r\n  \"toName\": \"Kamal K\",\r\n  \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n  \"message\": \"Test\",\r\n  \"coPId\": 1197,\r\n  \"elementId\": 31005,\r\n  \"programId\": 2,\r\n  \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - Hospital aand Regulation : §482.1(a)(1)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - Hospital aand Regulation : §482.1(a)(1) - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"programName\": \"Hospital\",\r\n  \"fromName\": \"Sruthi\",\r\n  \"toName\": \"Kamal K\",\r\n  \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n  \"message\": \"Test\",\r\n  \"coPId\": 1197,\r\n  \"elementId\": 31010,\r\n  \"programId\": 2,\r\n  \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - Hospital and Regulation :§482.1(a)(1)(ii)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\" EmailPrintCoP - Hospital and Regulation :§482.1(a)(1)(ii) - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"programName\": \"Hospital\",\r\n  \"fromName\": \"Sruthi\",\r\n  \"toName\": \"Kamal K\",\r\n  \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n  \"message\": \"Test\",\r\n  \"coPId\": 1197,\r\n  \"elementId\": 31024,\r\n  \"programId\": 2,\r\n  \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - Hospital and Regulation :§482.1(b)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - Hospital and Regulation :§482.1(b) - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"programName\": \"Hospital\",\r\n  \"fromName\": \"Sruthi\",\r\n  \"toName\": \"Kamal K\",\r\n  \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n  \"message\": \"Test\",\r\n  \"coPId\": 1197,\r\n  \"elementId\": 31006,\r\n  \"programId\": 2,\r\n  \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - Ambulatory and CoP: §416.2 Definitions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - Ambulatory and CoP: §416.2 Definitions - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"programName\": \"Ambulatory\",\r\n    \"fromName\": \"kamal\",\r\n    \"toName\": \"Kamal K\",\r\n    \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n    \"message\": \"Test\",\r\n    \"coPId\": 1144,\r\n    \"elementId\": 2490,\r\n    \"programId\": 23,\r\n    \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"programName\": \"CAH\",\r\n    \"fromName\": \"kamal\",\r\n    \"toName\": \"Kamal K\",\r\n    \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n    \"message\": \"Test\",\r\n    \"coPId\": 55,\r\n    \"elementId\": 730,\r\n    \"programId\": 69,\r\n    \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - CAH  and Regulation: §412.25(a)(2)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - CAH  and Regulation: §412.25(a)(2) - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"programName\": \"CAH\",\r\n    \"fromName\": \"kamal\",\r\n    \"toName\": \"Kamal K\",\r\n    \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n    \"message\": \"Test\",\r\n    \"coPId\": 55,\r\n    \"elementId\": 47566,\r\n    \"programId\": 69,\r\n    \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmailPrintCoP - CAH and Regulation: §412.25 - Common Requirements",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"programName\": \"CAH\",\r\n    \"fromName\": \"kamal\",\r\n    \"toName\": \"Kamal K\",\r\n    \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n    \"message\": \"Test\",\r\n    \"coPId\": 55,\r\n    \"elementId\": 45628,\r\n    \"programId\": 69,\r\n    \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status Message is OK\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Status Code Scenarios",
+					"item": [
+						{
+							"name": "Invalid CoPID- EmailPrintCoP",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"EmailPrintCoP - Payload should be False for Invalid CoPID\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(false)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"programName\": \"CAH\",\r\n    \"fromName\": \"kamal\",\r\n    \"toName\": \"Kamal K\",\r\n    \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n    \"message\": \"Test\",\r\n    \"coPId\": 0,\r\n    \"elementId\": 0,\r\n    \"programId\": 69,\r\n    \"siteID\": 15320\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Print/EmailPrintCoP",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Print",
+										"EmailPrintCoP"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "revAMP-GETCMSSTANDARDSDATA",
+			"item": [
+				{
+					"name": "Business Scenarios",
+					"item": [
+						{
+							"name": "Program Admin",
+							"item": [
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1 - Basis and scope.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital aand Regulation : §482.1(a)(1)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital aand Regulation : §482.1(a)(1) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"programName\": \"Hospital\",\r\n  \"fromName\": \"Sruthi\",\r\n  \"toName\": \"Kamal K\",\r\n  \"toAddress\": \"kkanagaraj@jcrinc.com\",\r\n  \"message\": \"Test\",\r\n  \"coPId\": 1197,\r\n  \"elementId\": 31010,\r\n  \"programId\": 2,\r\n  \"siteID\": 15320\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(a)(1)(ii)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\" GetCMSStandardsData - Hospital and Regulation :§482.1(a)(1)(ii) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(b)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation :§482.1(b) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Ambulatory and CoP: §416.2 Definitions",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Ambulatory and CoP: §416.2 Definitions - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 23,\r\n  \"userID\": 0,\r\n  \"copID\": 1144,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH  and Regulation: §412.25(a)(2)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH  and Regulation: §412.25(a)(2) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 1,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status Message is OK\", function () {",
+											"    pm.response.to.have.status(\"OK\");",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Site Manager",
+							"item": [
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1 - Basis and scope.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital aand Regulation : §482.1(a)(1)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital aand Regulation : §482.1(a)(1) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(a)(1)(ii)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\" GetCMSStandardsData - Hospital and Regulation :§482.1(a)(1)(ii) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(b)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation :§482.1(b) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Ambulatory and CoP: §416.2 Definitions",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Ambulatory and CoP: §416.2 Definitions - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 23,\r\n  \"userID\": 0,\r\n  \"copID\": 1144,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH  and Regulation: §412.25(a)(2)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH  and Regulation: §412.25(a)(2) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 2,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status Message is OK\", function () {",
+											"    pm.response.to.have.status(\"OK\");",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Staff Member",
+							"item": [
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1 - Basis and scope.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital aand Regulation : §482.1(a)(1)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital aand Regulation : §482.1(a)(1) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(a)(1)(ii)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\" GetCMSStandardsData - Hospital and Regulation :§482.1(a)(1)(ii) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(b)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation :§482.1(b) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Ambulatory and CoP: §416.2 Definitions",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Ambulatory and CoP: §416.2 Definitions - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 23,\r\n  \"userID\": 0,\r\n  \"copID\": 1144,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH  and Regulation: §412.25(a)(2)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH  and Regulation: §412.25(a)(2) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 4,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status Message is OK\", function () {",
+											"    pm.response.to.have.status(\"OK\");",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Mock Survey User",
+							"item": [
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1 - Basis and scope.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital aand Regulation : §482.1(a)(1)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital aand Regulation : §482.1(a)(1) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(a)(1)(ii)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\" GetCMSStandardsData - Hospital and Regulation :§482.1(a)(1)(ii) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(b)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation :§482.1(b) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Ambulatory and CoP: §416.2 Definitions",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Ambulatory and CoP: §416.2 Definitions - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 23,\r\n  \"userID\": 0,\r\n  \"copID\": 1144,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH  and Regulation: §412.25(a)(2)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH  and Regulation: §412.25(a)(2) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 8,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status Message is OK\", function () {",
+											"    pm.response.to.have.status(\"OK\");",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Mock Survey Reviewer",
+							"item": [
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1 - Basis and scope.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"EmailPrintCoP - Hospital and Regulation : §482.1 - Basis and scope. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation : §482.1(a) - Statutory basis. - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital aand Regulation : §482.1(a)(1)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital aand Regulation : §482.1(a)(1) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(a)(1)(ii)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\" GetCMSStandardsData - Hospital and Regulation :§482.1(a)(1)(ii) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Hospital and Regulation :§482.1(b)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Hospital and Regulation :§482.1(b) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 2,\r\n  \"userID\": 0,\r\n  \"copID\": 1197,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- Ambulatory and CoP: §416.2 Definitions",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - Ambulatory and CoP: §416.2 Definitions - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 23,\r\n  \"userID\": 0,\r\n  \"copID\": 1144,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Excluded hospital units: Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH  and Regulation: §412.25(a)(2)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH  and Regulation: §412.25(a)(2) - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCMSStandardsData- CAH and Regulation: §412.25 - Common Requirements",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"const jsonData= pm.response.json();\r",
+													"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+													" console.log(jsonData.success)\r",
+													" pm.expect(jsonData.success).to.eql(true)\r",
+													"  pm.expect(jsonData.payload).to.eql(true)\r",
+													"});\r",
+													"\r",
+													"pm.test(\"errors should be null\", function() {\r",
+													" console.log(jsonData.errors)\r",
+													" pm.expect(jsonData.errors).to.eql(null)\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"cms",
+												"api",
+												"Regulation",
+												"GetCMSStandardsData"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status Message is OK\", function () {",
+											"    pm.response.to.have.status(\"OK\");",
+											"});"
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Status Code Scenarios",
+					"item": [
+						{
+							"name": "Invalid copID - GetCMSStandardsData",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 0,\r\n  \"roleID\": 9,\r\n  \"certificationItemID\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Regulation",
+										"GetCMSStandardsData"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid roleID- GetCMSStandardsData Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData= pm.response.json();\r",
+											"pm.test(\"GetCMSStandardsData - CAH and Regulation: §412.25 - Common Requirements - success & Payload should be TRUE\", function() {\r",
+											" console.log(jsonData.success)\r",
+											" pm.expect(jsonData.success).to.eql(true)\r",
+											"  pm.expect(jsonData.payload).to.eql(true)\r",
+											"});\r",
+											"\r",
+											"pm.test(\"errors should be null\", function() {\r",
+											" console.log(jsonData.errors)\r",
+											" pm.expect(jsonData.errors).to.eql(null)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"siteID\": 15320,\r\n  \"programID\": 69,\r\n  \"userID\": 0,\r\n  \"copID\": 55,\r\n  \"roleID\": 0,\r\n  \"certificationItemID\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseURL}}/cms/api/Regulation/GetCMSStandardsData",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"cms",
+										"api",
+										"Regulation",
+										"GetCMSStandardsData"
 									]
 								}
 							},
